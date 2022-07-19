@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.traficlights{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("./img/Traffic-Light-PNG-Image.png");
+    background-size: cover;
+    position: absolute;
+    left: 280px;
+    top: 20px;
+}
+body{
+    background: url("./img/asphalt.webp");
+    background-size: cover;
+    overflow: hidden;
+}
+.circle{
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(51, 51, 51, 0.633);
+    border-radius: 50%;
+}
+.red{
+    animation-name: red1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    left: 217.5px;
+    top: 15px;
+
+}
+.yellow{
+    animation-name: yellow1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    position: absolute;
+    left: 217.5px;
+    top: 45px;
+}
+.green{
+    animation-name: green1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+    position: absolute;
+    left: 217.5px;
+    top: 75px;
+}
+@keyframes red1{
+    0%{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    15%{
+        background-color: rgba(255, 0, 0, 0.7);
+        box-shadow: 0 0 30px 5px red;
+    }
+    30%{
+        background-color: rgba(255, 0, 0, 0.7);
+        box-shadow: 0 0 30px 5px red;
+    }
+    45%{
+        background-color: rgba(255, 0, 0, 0.7);
+        box-shadow: 0 0 30px 5px red;
+    }
+    50%{
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+@keyframes yellow1{
+    10%{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    25%{
+        background-color: yellow;
+        box-shadow: 0 0 30px 5px yellow;
+    }
+    35%{
+        background-color: yellow;
+        box-shadow: 0 0 30px 5px yellow;
+    }
+    40%{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    
+}
+@keyframes green1{
+    5%{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    15%{
+        background-color: rgb(0, 255, 0, 0.7);
+        box-shadow: 0 0 30px 5px rgb(0, 255, 0);
+    }
+    30%{
+        background-color: rgb(0, 255, 0, 0.7);
+        box-shadow: 0 0 30px 5px rgb(0, 255, 0);
+    }
+    35%{
+        background-color: rgb(0, 255, 0, 0.7);
+        box-shadow: 0 0 30px 5px rgb(0, 255, 0);
+    }
+    40%{
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+.rolls-royce{
+    width: 100px;
+    position: absolute;
+    left: 670px;
+    top: 250px;
+    animation: car 10s;
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+}
+@keyframes car{
+    0%{
+        transform: translateY(0px) scale(1.5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(50px) scale(3);
+        opacity: 1;
+    }
+    60%{
+    }
+    90%{
+        opacity: 0;
+    }
+    98%{
+        transform: translateY(1000px)   scale(20);
+        opacity: 0;
+    }
+    99%{
+        transform: translateY(1000px)translateX(-200px)  scale(30);
+        opacity: 0;
+    }
+}
